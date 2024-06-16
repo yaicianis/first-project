@@ -1,0 +1,36 @@
+<div class="container">
+  <h1 class="text-center mt-5 text-light">Hero App</h1>
+ <div class="row mt-5">
+    <div class="col-3">
+      <input [ngModel]="hero.name" type="text" class="form-control m-1" placeholder="name">
+   </div>
+  </div>
+  <div class="col-3">
+    <input [ngModel]="hero.power" type="text" class="form-control m-1" placeholder="power">
+
+  </div>
+  <div class="col-3">
+    <input [ngModel]="hero.image" type="text" class="form-control m-1" placeholder="img url">
+
+  </div>
+  <div class="col-3">
+     <button (click)="ajout()" class="btn form-control text-light" >create</button>
+  </div>
+  
+
+ <div class="row mt-5">
+   <div class="col-3" *ngFor="let item of heros">
+    <div class="card p-1">
+        <div class="card-image">
+           <img [src]=item.image  width="253" height="160">
+        </div>
+        <div class="card-body">
+           <h2>{{item.name}}</h2>
+           <p> {{item.power}}</p>
+        </div>
+
+       </div>
+
+  </div>
+ </div>
+
